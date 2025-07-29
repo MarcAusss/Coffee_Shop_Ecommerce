@@ -3,6 +3,7 @@ import NavigationBar from "./components/nav";
 import LandingPageHero from "./components/hero1";
 import ProductShowcase from "./components/productShowcase";
 import NewMenu from "./components/newMenu";
+import MessageSection from "./components/message";
 
 export default function Home() {
   return (
@@ -15,7 +16,7 @@ export default function Home() {
         <LandingPageHero/>
       </div>
 
-      <div className="my-40">
+      <div className="mt-40 mb-20">
         <ProductShowcase/>
       </div>
 
@@ -23,7 +24,9 @@ export default function Home() {
         <NewMenu/>
       </div>
 
-      <div className="h-20"></div>
+      <div className="h-20 mt-20 relative z-50">
+        <MessageSection/>
+      </div>
     </main>
   );
 }

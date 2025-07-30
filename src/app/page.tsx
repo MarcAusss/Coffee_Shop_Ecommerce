@@ -4,6 +4,7 @@ import LandingPageHero from "./components/hero1";
 import ProductShowcase from "./components/productShowcase";
 import NewMenu from "./components/newMenu";
 import MessageSection from "./components/message";
+import SpecialCoffee from "./components/Specials";
 
 export default function Home() {
   return (
@@ -22,6 +23,10 @@ export default function Home() {
 
       <div className="">
         <NewMenu/>
+      </div>
+
+      <div className="">
+        <SpecialCoffee/>
       </div>
 
       <div className="h-20 mt-20 relative z-50">

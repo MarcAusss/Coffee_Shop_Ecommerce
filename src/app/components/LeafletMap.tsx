@@ -1,4 +1,3 @@
-// components/Map.tsx
 'use client';
 
 import { MapContainer, TileLayer, Marker, Popup } from 'react-leaflet';
@@ -6,8 +5,9 @@ import 'leaflet/dist/leaflet.css';
 import L from 'leaflet';
 import { useEffect } from 'react';
 
-const Map = () => {
-  // Fix icon not showing
+export default function LeafletMap() {
+  const position: [number, number] = [13.35780149521794, 123.73205877386116];
+
   useEffect(() => {
     delete (L.Icon.Default.prototype as any)._getIconUrl;
 
@@ -19,23 +19,14 @@ const Map = () => {
   }, []);
 
   return (
-    <MapContainer
-      center={[13.6206, 123.1948]} // example coordinates
-      zoom={13}
-      scrollWheelZoom={false}
-      style={{ height: '400px', width: '100%' }}
-    >
+    <MapContainer center={position} zoom={13} scrollWheelZoom={false} className="h-full w-full z-0">
       <TileLayer
+        attribution='&copy; <a href="https://www.openstreetmap.org/">OpenStreetMap</a> contributors'
         url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
-        attribution='&copy; <a href="http://osm.org/copyright">OpenStreetMap</a> contributors'
       />
-      <Marker position={[13.6206, 123.1948]}>
-        <Popup>
-          Your Shop Here!
-        </Popup>
+      <Marker position={position}>
+        <Popup>Your Location 📍</Popup>
       </Marker>
     </MapContainer>
   );
-};
-
-export default Map;
+}

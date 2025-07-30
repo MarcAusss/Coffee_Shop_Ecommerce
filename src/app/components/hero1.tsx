@@ -1,7 +1,7 @@
 export default function LandingPageHero() {
     return (
         <div className="max-w-[95rem] mx-auto">
-        <div className="py-20 mt-20">
+        <div className="pt-36 mb-20">
             <h2 className="text-3xl ">
                 <span className="tracking-widest">4511</span>
                 Café

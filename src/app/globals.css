@@ -73,4 +73,16 @@ h1{
   transform: rotate(40deg);
 }
 
-
+.bg-design::before {
+  content: '';
+  position: absolute;
+  top: 0vh; /* Pull it up so the point appears down */
+  left: 50%;
+  transform: translateX(-50%);
+  width: 0;
+  height: 0;
+  border-left: 50vw solid transparent;
+  border-right: 50vw solid transparent;
+  border-top: 300px solid #f5e1cd; /* triangle color */
+  z-index: 0;
+}

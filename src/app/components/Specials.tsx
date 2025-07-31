@@ -52,11 +52,11 @@ const layout = [
   { index: 4, col: "col-span-1", row: "row-span-2" },
   { index: 3, col: "col-span-1", row: "row-span-1" },
   { index: 2, col: "col-span-2", row: "row-span-1" },
-  { index: 1, col: "col-span-1", row: "row-span-1" }, // index 1 (image <-> details)
+  { index: 1, col: "col-span-1", row: "row-span-1" },
   { index: 0, col: "col-span-1", row: "row-span-2" },
-  { index: 6, col: "col-span-1", row: "row-span-1" }, // new
-  { index: 7, col: "col-span-1", row: "row-span-2" }, // new
-  { index: 7, col: "col-span-1", row: "row-span-2" }, // new
+  { index: 6, col: "col-span-1", row: "row-span-1" },
+  { index: 7, col: "col-span-1", row: "row-span-2" },
+  { index: 7, col: "col-span-1", row: "row-span-2" },
 ];
 
 export default function SpecialCoffee() {
@@ -83,39 +83,15 @@ export default function SpecialCoffee() {
 
           if (i === 4) {
             return (
-              <div
-                key={`detail-${i}`}
-                className={clsx(
-                  "relative overflow-hidden",
-                  col,
-                  row,
-                  "rounded-xl bg-[#fff4e1]"
-                )}
-              >
+              <div key={`detail-${i}`} className={clsx( "relative overflow-hidden", col, row, "rounded-xl bg-[#fff4e1]")}>
                 <AnimatePresence mode="wait">
                   {showDetail ? (
-                    <motion.div
-                      key="details"
-                      initial={{ x: "100%" }}
-                      animate={{ x: 0 }}
-                      exit={{ x: "-100%" }}
-                      transition={{ duration: 0.6 }}
-                      className="w-full h-full bg-[#faebd7] p-4 flex flex-col justify-center rounded-xl"
-                    >
+                    <motion.div key="details" initial={{ x: "100%" }} animate={{ x: 0 }} exit={{ x: "-100%" }} transition={{ duration: 0.6 }} className="w-full h-full bg-[#faebd7] p-4 flex flex-col justify-center rounded-xl">
                       <h3 className="text-lg font-bold">{image.name}</h3>
                       <p className="text-sm mt-2 text-gray-700">{image.desc}</p>
                     </motion.div>
                   ) : (
-                    <motion.img 
-                      key="image"
-                      src={image.src}
-                      alt={image.name}
-                      initial={{ x: "100%" }}
-                      animate={{ x: 0 }}
-                      exit={{ x: "-100%" }}
-                      transition={{ duration: 0.6 }}
-                      className="w-full h-full object-cover rounded-xl"
-                    />
+                    <motion.img  key="image" src={image.src} alt={image.name} initial={{ x: "100%" }} animate={{ x: 0 }} exit={{ x: "-100%" }} transition={{ duration: 0.6 }} className="w-full h-full object-cover rounded-xl" />
                   )}
                 </AnimatePresence>
               </div>
@@ -140,11 +116,7 @@ export default function SpecialCoffee() {
 
           return (
             <div key={`default-${i}`} className={clsx(col, row)}>
-              <img
-                src={image.src}
-                alt={image.name}
-                className="w-full h-full object-cover rounded-xl"
-              />
+              <img src={image.src} alt={image.name} className="w-full h-full object-cover rounded-xl" />
             </div>
           );
         })}

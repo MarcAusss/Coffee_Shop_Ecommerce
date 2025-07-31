@@ -5,6 +5,7 @@ import ProductShowcase from "./components/productShowcase";
 import NewMenu from "./components/newMenu";
 import MessageSection from "./components/message";
 import SpecialCoffee from "./components/Specials";
+import CoffeeMenu from "./components/menu";
 
 export default function Home() {
   return (
@@ -13,16 +14,20 @@ export default function Home() {
         <NavigationBar/>
       </div>
 
-      <div className="bg-[#f5e1cd] pb-20 relative overflow-hidden">
+      <div className=" relative overflow-hidden">
         <LandingPageHero/>
       </div>
 
-      <div className="">
+      <div className="pb-20">
         <ProductShowcase/>
       </div>
 
-      <div className="">
+      <div className="mt-20 mb-10">
         <NewMenu/>
+      </div>
+
+      <div className="">
+        <CoffeeMenu/>
       </div>
 
       <div className="">

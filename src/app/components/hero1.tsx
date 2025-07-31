@@ -1,6 +1,6 @@
 export default function LandingPageHero() {
     return (
-        <div className="max-w-[95rem] pt-36 mx-auto">
+        <div className="max-w-[95rem] py-36 mx-auto">
             <div className=" mb-20 relative z-20">
                 <h2 className="text-3xl ">
                     <span className="tracking-widest">4511</span>
@@ -37,8 +37,8 @@ export default function LandingPageHero() {
                 </div>
                 
             </div>
-            <img src="/images/left.png" alt="" className="imageBG_design absolute left-0 top-0" />
-            <img src="/images/right.png" alt="" className="imageBG_design2 absolute right-0 top-0" />
+            {/* <img src="/images/left.png" alt="" className="imageBG_design absolute left-0 top-0" /> */}
+            {/* <img src="/images/right.png" alt="" className="imageBG_design2 absolute right-0 top-0" /> */}
         </div>
     );
 }

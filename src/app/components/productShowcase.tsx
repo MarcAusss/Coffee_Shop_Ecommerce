@@ -4,19 +4,21 @@ import { useEffect, useState } from "react";
 import { motion } from "framer-motion";
 
 const images = [
-  "/images/Coffees_PNG/1.png",
-  "/images/Coffees_PNG/2.png",
-  "/images/Coffees_PNG/3.png",
-  "/images/Coffees_PNG/4.png",
-  "/images/Coffees_PNG/5.png",
-  "/images/Coffees_PNG/6.png",
-  "/images/Coffees_PNG/7.png",
-  "/images/Coffees_PNG/8.png",
-  "/images/Coffees_PNG/9.png",
-  "/images/Coffees_PNG/10.png",
-  "/images/Coffees_PNG/11.png",
-  "/images/Coffees_PNG/12.png",
-  "/images/Coffees_PNG/13.png",
+  "/images/Coffees/Almond Frappe.webp",
+  "/images/Coffees/Caramel Frappe.webp",
+  "/images/Coffees/Coffee Banana Milkshake.webp",
+  "/images/Coffees/Coffee Slushie.webp",
+  "/images/Coffees/Coffee Smoothie.webp",
+  "/images/Coffees/dalgona coffee.webp",
+  "/images/Coffees/Iced Caramel Latte Macchiato.webp",
+  "/images/Coffees/Iced Coconut Latte.webp",
+  "/images/Coffees/Iced Shaken Espresso.webp",
+  "/images/Coffees/Iced Vanilla Latte.webp",
+  "/images/Coffees/Mocha Frappe.webp",
+  "/images/Coffees/Mocha Iced Coffee.webp",
+  "/images/Coffees/Mocha Iced Latte.webp",
+  "/images/Coffees/Sparkling Iced Coffee.webp",
+  "/images/Coffees/Vietnamese Iced Coffee.webp",
 ];
 
 export default function ProductShowcase() {
@@ -54,7 +56,7 @@ export default function ProductShowcase() {
         return "opacity-10 scale-50 blur-sm";
       case 1:
       case 3:
-        return "opacity-30 scale-75 blur-[1px]";
+        return "opacity-30 blur-[1px]";
       case 2:
         return "opacity-100 scale-100 z-10";
       default:
@@ -63,18 +65,15 @@ export default function ProductShowcase() {
   };
 
   return (
-    <div className="relative w-full h-[50vh] flex items-center justify-center overflow-hidden bg-design">
-      {/* Center circle background */}
-      <div className="absolute z-0 w-[280px] h-[280px] bg-[#966A4C] rounded-full shadow-inner " />
+    <div className="relative w-full h-[50vh] flex items-center justify-center overflow-hidden">
 
-      {/* Sliding images container */}
       <div className="relative w-full h-full flex items-center justify-center">
         {displayIndices.map((imageIndex, i) => (
           <motion.img
             key={imageIndex}
             src={images[imageIndex]}
             alt={`Product ${imageIndex}`}
-            className={`absolute top-1/2 -translate-y-1/2 transition-all duration-700 ease-in-out h-[55vh] aspect-[3/4] object-cover rounded-xl ${positions[i]} ${getImageClass(i)} ${
+            className={`absolute transition-all duration-700 ease-in-out h-[60vh] aspect-[1] ${positions[i]} ${getImageClass(i)} ${
               i === 2 ? "" : ""
             }`}
             animate={{ opacity: 1, scale: 1 }}

@@ -106,7 +106,7 @@ export default function SpecialCoffee() {
                       <p className="text-sm mt-2 text-gray-700">{image.desc}</p>
                     </motion.div>
                   ) : (
-                    <motion.img
+                    <motion.img 
                       key="image"
                       src={image.src}
                       alt={image.name}

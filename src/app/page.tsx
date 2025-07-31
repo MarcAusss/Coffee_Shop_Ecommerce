@@ -13,11 +13,11 @@ export default function Home() {
         <NavigationBar/>
       </div>
 
-      <div className="bg-[#f5e1cd] pb-20">
+      <div className="bg-[#f5e1cd] pb-20 relative overflow-hidden">
         <LandingPageHero/>
       </div>
 
-      <div className=" relative overflow-x-hidden">
+      <div className="">
         <ProductShowcase/>
       </div>
 

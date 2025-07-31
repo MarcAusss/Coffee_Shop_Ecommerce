@@ -63,9 +63,9 @@ export default function ProductShowcase() {
   };
 
   return (
-    <div className="relative w-full h-[50vh] bg-[#fdfcf9] flex items-center justify-center overflow-hidden bg-design">
+    <div className="relative w-full h-[50vh] flex items-center justify-center overflow-hidden bg-design">
       {/* Center circle background */}
-      <div className="absolute z-0 w-[280px] h-[280px] bg-[#966A4C] rounded-full shadow-inner" />
+      <div className="absolute z-0 w-[280px] h-[280px] bg-[#966A4C] rounded-full shadow-inner " />
 
       {/* Sliding images container */}
       <div className="relative w-full h-full flex items-center justify-center">

@@ -2,7 +2,6 @@ export default function NewMenu() {
   return (
     <div className="relative min- overflow-visible">
       <div className="relative z-10 p-12">
-        <img src="/images/Vector 16.png" alt="" className="imageBG_design absolute top-[20px]" />
         <div className="flex justify-between items-center mx-auto max-w-[95rem] h-2/3 relative z-10">
             <div className="">
                 <h1 className="text-6xl text-[#966A4C] mb-10">NEW BREWS!!</h1>

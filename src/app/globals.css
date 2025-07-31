@@ -69,8 +69,12 @@ h1{
 
 
 .imageBG_design{
-  height: 900px;
-  transform: rotate(40deg);
+  height: 100%;
+  /* transform: rotate(-40deg); */
+}
+.imageBG_design2{
+  height: 100%;
+  /* transform: rotate(40deg); */
 }
 
 .bg-design::before {
@@ -84,5 +88,5 @@ h1{
   border-left: 50vw solid transparent;
   border-right: 50vw solid transparent;
   border-top: 300px solid #f5e1cd; /* triangle color */
-  z-index: 0;
+  z-index: -22;
 }

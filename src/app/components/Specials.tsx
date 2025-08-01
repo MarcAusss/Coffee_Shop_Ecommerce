@@ -72,7 +72,7 @@ export default function SpecialCoffee() {
     const rotate = setInterval(() => {
       setDynamicIndex((prev) => (prev + 1) % images.length);
     }, 2000);
-    return () => clearInterval(rotate);       
+    return () => clearInterval(rotate);
   }, []);
 
   return (

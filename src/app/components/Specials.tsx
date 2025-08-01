@@ -76,50 +76,64 @@ export default function SpecialCoffee() {
   }, []);
 
   return (
-    <div className="max-w-6xl mx-auto my-20 px-4">
-      <div className="grid grid-cols-3 md:grid-cols-4 grid-rows-2 gap-4 h-[80vh]">
-        {layout.map(({ index, col, row }, i) => {
-          const image = images[index % images.length];
+    <div className="max-w-6xl mx-auto my-20 px-4 h-[60vh]">
+      <div className="grid gap-3 p-2 h-full" style={{ gridTemplateColumns: "repeat(6, 1fr)", gridTemplateRows: "repeat(8, 1fr)", }}>
+        <div className="flex items-center justify-center rounded-md bg-amber-100"
+          style={{
+            gridColumn: "span 3",
+            gridRow: "span 3",
+          }}
+        >
+          <p>Salmon</p>
+        </div>
 
-          if (i === 4) {
-            return (
-              <div key={`detail-${i}`} className={clsx( "relative overflow-hidden", col, row, "rounded-xl bg-[#fff4e1]")}>
-                <AnimatePresence mode="wait">
-                  {showDetail ? (
-                    <motion.div key="details" initial={{ x: "100%" }} animate={{ x: 0 }} exit={{ x: "-100%" }} transition={{ duration: 0.6 }} className="w-full h-full bg-[#faebd7] p-4 flex flex-col justify-center rounded-xl">
-                      <h3 className="text-lg font-bold">{image.name}</h3>
-                      <p className="text-sm mt-2 text-gray-700">{image.desc}</p>
-                    </motion.div>
-                  ) : (
-                    <motion.img  key="image" src={image.src} alt={image.name} initial={{ x: "100%" }} animate={{ x: 0 }} exit={{ x: "-100%" }} transition={{ duration: 0.6 }} className="w-full h-full object-cover rounded-xl" />
-                  )}
-                </AnimatePresence>
-              </div>
-            );
-          }
+        <div className="flex items-center justify-center rounded-md bg-amber-100"
+          style={{
+            gridColumn: "span 3",
+            gridRow: "span 3",
+          }}
+        >
+          <p>Broccoli</p>
+        </div>
 
-          if (i === 2) {
-            return (
-              <div key={`rotating-${i}`} className={clsx(col, row)}>
-                <motion.img
-                  key={dynamicIndex}
-                  src={images[dynamicIndex].src}
-                  alt="Rotating Coffee"
-                  className="w-full h-full object-cover rounded-xl"
-                  initial={{ opacity: 0.5, scale: 0.95 }}
-                  animate={{ opacity: 1, scale: 1 }}
-                  transition={{ duration: 0.5 }}
-                />
-              </div>
-            );
-          }
+        <div className="flex items-center justify-center rounded-md bg-amber-100"
+          style={{
+            gridColumn: "span 2",
+            gridRow: "span 8",
+          }}
+        >
+          <p>Tamago</p>
+        </div>
 
-          return (
-            <div key={`default-${i}`} className={clsx(col, row)}>
-              <img src={image.src} alt={image.name} className="w-full h-full object-cover rounded-xl" />
-            </div>
-          );
-        })}
+        <div className="flex items-center justify-center rounded-md"
+          style={{
+            gridColumn: "span 2",
+            gridRow: "span 2",
+          }}
+        >
+          <div className="text-center">
+            <h1 className="text-2xl">4511 Café</h1>
+            <p className="text-lg">Our Social Media</p>
+          </div>
+        </div>
+
+        <div className="flex items-center justify-center rounded-md bg-amber-100"
+          style={{
+            gridColumn: "span 2",
+            gridRow: "span 8",
+          }}
+        >
+          <p>Edamame</p>
+        </div>
+
+        <div className="flex items-center justify-center rounded-md bg-amber-100"
+          style={{
+            gridColumn: "span 2",
+            gridRow: "span 6",
+          }}
+        >
+          <p>Tomato</p>
+        </div>
       </div>
     </div>
   );

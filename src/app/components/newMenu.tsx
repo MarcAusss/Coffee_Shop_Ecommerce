@@ -1,10 +1,10 @@
 export default function NewMenu() {
   return (
     <div className="relative overflow-visible">
-      <div className="relative z-10 py-12 bg-[#f5e1cd]">
+      <div className="relative z-10 py-12 ">
         <div className="flex justify-between items-center mx-auto max-w-[95rem] h-2/3 relative z-10">
             <div className="">
-                <h1 className="text-6xl text-[#966A4C] mb-10">NEW BREWS!!</h1>
+                <h1 className="text-6xl text-[#966A4C] mb-10">New to Menu</h1>
                 <a href="" className="bg-[#966A4C] tracking-wider text-white py-3 px-7 rounded-full" >
                     ORDER NOW
                 </a>

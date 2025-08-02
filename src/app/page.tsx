@@ -6,6 +6,7 @@ import NewMenu from "./components/newMenu";
 import MessageSection from "./components/message";
 import SpecialCoffee from "./components/Specials";
 import CoffeeMenu from "./components/menu";
+import OtherProducts from "./components/otherProducts";
 
 export default function Home() {
   return (
@@ -22,12 +23,16 @@ export default function Home() {
         <ProductShowcase/>
       </div>
 
-      <div className="mt-20 mb-10">
-        <NewMenu/>
+      <div className="bg-[#F2EDE5]">
+        <CoffeeMenu/>
       </div>
 
-      <div className="">
-        <CoffeeMenu/>
+      <div className="bg-[#F2EDE5] h-20">
+        <OtherProducts/>
+      </div>
+
+      <div className="mt-20 mb-10">
+        <NewMenu/>
       </div>
 
       <div className="">

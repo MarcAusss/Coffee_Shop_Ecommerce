@@ -78,7 +78,7 @@ export default function SpecialCoffee() {
   return (
     <div className="max-w-6xl mx-auto my-20 px-4 h-[60vh]">
       <div className="grid gap-3 p-2 h-full" style={{ gridTemplateColumns: "repeat(6, 1fr)", gridTemplateRows: "repeat(8, 1fr)", }}>
-        <div className="flex items-center justify-center rounded-md bg-amber-100"
+        <div className="flex items-center justify-center rounded-md bg-[#f5e1cd]"
           style={{
             gridColumn: "span 3",
             gridRow: "span 3",
@@ -87,7 +87,7 @@ export default function SpecialCoffee() {
           <p>Salmon</p>
         </div>
 
-        <div className="flex items-center justify-center rounded-md bg-amber-100"
+        <div className="flex items-center justify-center rounded-md bg-[#f5e1cd]"
           style={{
             gridColumn: "span 3",
             gridRow: "span 3",
@@ -96,7 +96,7 @@ export default function SpecialCoffee() {
           <p>Broccoli</p>
         </div>
 
-        <div className="flex items-center justify-center rounded-md bg-amber-100"
+        <div className="flex items-center justify-center rounded-md bg-[#f5e1cd]"
           style={{
             gridColumn: "span 2",
             gridRow: "span 8",
@@ -117,7 +117,7 @@ export default function SpecialCoffee() {
           </div>
         </div>
 
-        <div className="flex items-center justify-center rounded-md bg-amber-100"
+        <div className="flex items-center justify-center rounded-md bg-[#f5e1cd]"
           style={{
             gridColumn: "span 2",
             gridRow: "span 8",
@@ -126,7 +126,7 @@ export default function SpecialCoffee() {
           <p>Edamame</p>
         </div>
 
-        <div className="flex items-center justify-center rounded-md bg-amber-100"
+        <div className="flex items-center justify-center rounded-md bg-[#f5e1cd]"
           style={{
             gridColumn: "span 2",
             gridRow: "span 6",

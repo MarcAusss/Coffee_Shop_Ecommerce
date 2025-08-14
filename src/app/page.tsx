@@ -31,9 +31,6 @@ export default function Home() {
         <OtherProducts/>
       </div>
 
-
-
-
       <div className="mt-20 mb-10">
         <NewMenu/>
       </div>

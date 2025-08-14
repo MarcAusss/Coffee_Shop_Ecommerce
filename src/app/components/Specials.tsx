@@ -25,10 +25,7 @@ const images = [
     name: "Coconut Latte",
     desc: "Tropical coconut meets bold espresso.",
   },
-
-
-     
-
+  
   {
     src: "/images/Coffees/Iced Caramel Latte Macchiato.webp",
     name: "Iced Caramel Latte",
